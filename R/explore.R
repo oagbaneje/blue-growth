@@ -1,5 +1,5 @@
 library(readxl)
-
+library(xts)
 # Import CSV and Excel files
 biblio <- read.csv("data/Billia Croo Meterological Station_a7f32668-ea23-4c80-8bbd-70da675d6667.csv")
 adcp <-  read_excel("data/Blue Growth Data Challenge_ADCP 2015.xlsx", sheet = 2)
@@ -18,3 +18,23 @@ tidal_current_velocity_north <- read.csv("data/Tidal current and water level mod
 tidal_current_sea_level <- read.csv("data/Tidal current and water level model data_ Water level elevation, referenced to mean sea level [m]_c92ce4b4-478a-4523-a77f-1.csv")
 wave_observations_buoys_spec <- read.csv("data/Wave in-situ observations using Datawell Waverider buoys - Specstats_d52e4c3f-1d0f-4e6c-8b7f-eff9e433651a.csv")
 wave_observations_buoys_wave <- read.csv("data/Wave in-situ observations using Datawell Waverider buoys - Wavestats_56907169-2f5d-48e6-a9ce-76bb560cd339.csv")
+
+str(biblio)
+str(adcp)
+str(met)
+str(bc_dwr_e_spec)
+str(bc_dwr_h_wave)
+str(bc_dwr_j_spec)
+str(bc_dwr_j_wave)
+str(emec_dhi_model_tide)
+str(fow_met)
+str(sf_dwr_a_spec)
+str(sf_dwr_a_wave)
+str(eday_meteor_station)
+str(tidal_current_velocity_east)
+str(tidal_current_velocity_north)
+str(tidal_current_sea_level)
+str(wave_observations_buoys_spec)
+str(wave_observations_buoys_wave)
+
+pairs(adcp)
